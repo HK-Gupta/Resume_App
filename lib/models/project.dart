@@ -9,43 +9,30 @@ class Project {
 
 final List<Project> projects = [
   Project(
-    name: 'News App',
-    link: 'https://github.com/HK-Gupta/news-app',
+    name: 'Hostel Management App',
+    link: 'https://github.com/HK-Gupta/Hostel_Management',
     description: [
-      'Built using MVVM architecture and Kotlin.',
-      'Implemented real-time news fetching using REST API.',
-      'Integrated Firebase for authentication and data storage.',
-      'Deployed to Play Store with over 500 downloads.'
+      'Technologies Used: Flutter, Node.js, Express, MongoDB, REST API, Provider, Shared Preferences, Nodemailer.',
+      'Built a hostel management app with separate panels for 100+ students and admins, enabling issue creation, room availability checks, and room change requests, while admins manage staff and approve changes.',
+      'Applied REST APIs in Node.js and Express with MongoDB, reducing data fetch time and ensuring smooth data management. Enhanced UX by using Provider for state management and Shared Preferences',
     ],
   ),
   Project(
-    name: 'Tic-Tac-Toe Multiplayer',
-    link: 'https://github.com/HK-Gupta/tic-tac-toe',
+    name: 'Stock Quotes App ',
+    link: 'https://github.com/HK-Gupta/Stock_Quotes',
     description: [
-      'Developed using Flutter, Firebase, and Google Sign-In.',
-      'Features both offline solo and multiplayer modes.',
-      'Integrated auto-generated room key and user statistics.',
-      'Smooth UI/UX with responsive design.'
+      'Technologies Used: Flutter, Dart, Firebase, Alpha Vantage API, flutter bloc.',
+      'Established a secure user authentication system using Firebase, enabling seamless account creation and login experiences for over 1,000 users while ensuring data privacy and profile update capabilities.',
+      'Developed stock search functionality allowing users to search for stocks by symbols and country, view detailed charts spanning 1 year, and access comprehensive stock information.',
     ],
   ),
   Project(
-    name: 'News App',
-    link: 'https://github.com/HK-Gupta/news-app',
+    name: 'Ecommerce Application',
+    link: 'https://github.com/HK-Gupta/-Ecommerce',
     description: [
-      'Built using MVVM architecture and Kotlin.',
-      'Implemented real-time news fetching using REST API.',
-      'Integrated Firebase for authentication and data storage.',
-      'Deployed to Play Store with over 500 downloads.'
-    ],
-  ),
-  Project(
-    name: 'Tic-Tac-Toe Multiplayer',
-    link: 'https://github.com/HK-Gupta/tic-tac-toe',
-    description: [
-      'Developed using Flutter, Firebase, and Google Sign-In.',
-      'Features both offline solo and multiplayer modes.',
-      'Integrated auto-generated room key and user statistics.',
-      'Smooth UI/UX with responsive design.'
+      'Tech Stack: Flutter, Dart, Firebase, Stripe, HTTP, Lottie Animations.',
+      'Engineered a robust eCommerce application utilizing Flutter and Firebase, integrating user and admin models to streamline inventory management.',
+      'Integrated Stripe and HTTP for secure payment processing, decreasing payment failures, and incorporated LottieAnimations for an intuitive and responsive UI.',
     ],
   ),
 ];

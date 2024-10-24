@@ -82,7 +82,7 @@ class ResumePDF extends StatelessWidget {
                               userDetails.email,
                               style: pw.TextStyle(
                                   fontSize: 12,
-                                  color: PdfColor.fromInt(0xFF0000FF)
+                                  color: PdfColor.fromInt(0xFF0000ff)
                               ),
 
                             ),
@@ -107,7 +107,7 @@ class ResumePDF extends StatelessWidget {
                             ),
                             pw.Container(
                               decoration: pw.BoxDecoration(
-                                color: PdfColor.fromInt(0xFF8967F8),
+                                color: PdfColor.fromInt(0xFF06a2d8),
                                 borderRadius: pw.BorderRadius.circular(10),
                               ),
                               padding: pw.EdgeInsets.all(10),
@@ -185,7 +185,7 @@ class ResumePDF extends StatelessWidget {
                                 padding: pw.EdgeInsets.symmetric(horizontal: 10, vertical: 7),
                                 decoration: pw.BoxDecoration(
                                     borderRadius: pw.BorderRadius.circular(10),
-                                    color: PdfColor.fromInt(0xFF227899)
+                                    color: PdfColor.fromInt(0xFF06a2d8)
                                 ),
                                 child: pw.Column(
                                   children: skills.map((category) => _buildSkillCategoryWidget(category)).toList(),
@@ -260,8 +260,8 @@ class ResumePDF extends StatelessWidget {
         pw.Row(
           mainAxisAlignment: pw.MainAxisAlignment.spaceBetween,
           children: [
-            pw.Text(project.name, style: pw.TextStyle(fontSize: 14)),
-            pw.UrlLink(destination: project.link, child: pw.Text("View")),
+            pw.Text(project.name, style: pw.TextStyle(fontSize: 14),),
+            pw.UrlLink(destination: project.link, child: pw.Text("View", style: pw.TextStyle(color: PdfColor.fromInt(0xFF06a2d8)))),
           ],
         ),
         pw.Column(
@@ -269,8 +269,9 @@ class ResumePDF extends StatelessWidget {
           children: project.description.map((desc) {
             return pw.Bullet(
                 text: desc,
-                style: pw.TextStyle(fontSize: 9),
+                style: pw.TextStyle(fontSize: 9, height: 0.1),
                 margin: pw.EdgeInsets.zero,
+                padding: pw.EdgeInsets.zero,
                 bulletMargin: pw.EdgeInsets.only(
                   top: 0.7 * PdfPageFormat.mm,
                   left: 5.0 * PdfPageFormat.mm,
@@ -285,18 +286,9 @@ class ResumePDF extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Printing.layoutPdf(onLayout: (format) => _createResumePdf());
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Generate Resume PDF'),
-      ),
-      body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            Printing.layoutPdf(onLayout: (format) => _createResumePdf());
-          },
-          child: const Text('Generate PDF'),
-        ),
-      ),
+      body: SizedBox(),
     );
   }
 }

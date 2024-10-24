@@ -84,7 +84,7 @@ class ResumeHelper extends StatelessWidget {
                           ),
                           Container(
                             decoration: BoxDecoration(
-                              color: Colors.blueGrey[200],
+                              color: Color(0xFF06a2d8),
                               borderRadius: BorderRadius.circular(10),
                             ),
                             padding: const EdgeInsets.all(10),
@@ -162,7 +162,7 @@ class ResumeHelper extends StatelessWidget {
                               padding: EdgeInsets.symmetric(horizontal: 10, vertical: 7),
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(10),
-                                color: Colors.blueGrey[100]
+                                color: Color(0xFF06a2d8)
                               ),
                               child: Column(
                                 children: skills.map((category) => _buildSkillCategoryWidget(category)).toList(),
@@ -173,13 +173,21 @@ class ResumeHelper extends StatelessWidget {
                       ),
                     ]
                 ),
-
-                InkWell(
-                  onTap: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (_) => ResumePDF(userDetails: userDetails, projects: projects, education: education, skills: skills)));
-                  },
-                  child: Text("Goto Next"),
-                )
+                const SizedBox(height: 30,),
+                Container(
+                  padding: EdgeInsets.symmetric(vertical: 9, horizontal: 20),
+                  decoration: BoxDecoration(
+                    color: Colors.cyan[300],
+                    borderRadius: BorderRadius.circular(10)
+                  ),
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (_) => ResumePDF(userDetails: userDetails, projects: projects, education: education, skills: skills)));
+                    },
+                    child: Text("Generate Pdf"),
+                  ),
+                ),
+                const SizedBox(height: 50,),
               ],
             ),
           ),
