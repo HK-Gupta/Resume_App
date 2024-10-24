@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:resume_app/models/user_details.dart';
+import 'package:resume_app/presentation/resume_helper.dart';
 import 'package:resume_app/presentation/resume_pdf.dart';
 
-import 'models/resume.dart';
 
 void main() {
   runApp(MyApp());
@@ -10,15 +11,8 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: ResumePDF(resume: Resume(
-        name: 'Harsh Kumar',
-        contact: '+91 9876543210',
-        email: 'harsh@example.com',
-        education: 'B.Tech in Computer Science, XYZ University',
-        experience: 'Software Developer Intern at ABC Company',
-        skills: ['Flutter', 'Dart', 'Firebase', 'REST APIs'],
-      )),
+    return const MaterialApp(
+      home: ResumeHelper(),
     );
   }
 }
